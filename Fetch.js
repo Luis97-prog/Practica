@@ -37,7 +37,7 @@ const pintarCard = (data) =>{
     });
     cards.appendChild(fragment);
 };
-const loadingData = (estado) => {
+const loadingData = (estado) => { //pintar el loading
     const loading  = document.getElementById("Loading")
     if(estado){
         loading.classList.remove("d-none");
