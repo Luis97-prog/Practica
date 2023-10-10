@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Educacion</title>
+</head>
+<body>
+    <div class="container my-5">
+        <h1>Estudiantes y Profesores</h1>
+        <form id="formulario">
+            <input 
+            type="text" 
+            class="form-control-mb-2"
+            name="nombre"
+            placeholder="Ingrese nombre"
+            value="Luis"
+            required
+            />
+            <input 
+            type="number" 
+            class="form-control-mb-2"
+            name="edad"
+            placeholder="Ingrese edad"
+            required
+            />
+            <select name="form-select mb-2" name="opcion">
+                <option value="Estudiante" selected>Estudiante</option>
+                <option value="Profesor">Profesor</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Agregar</button>
+            <div class="alert alert-danger d-none" role="alert">
+                "Por favor ingrese un nombre sin repetir el anterior"
+              </div>
+        </form>
+        <section class="row mt-3">
+            <div class="col-6" id="cardsEstudiantes"></div>
+            <div class="col-6" id="cardsProfesores"></div>
+        </section>
+    </div>
+    <template id="templateEstudiante">
+        <article class="card mb-2">
+            <div class="card-body">
+                <h5>
+                    <span class="text-primary">Nombre</span>
+                    <span class="badge bg-success">Aprobado</span>
+                </h5>
+                <h6>Estudiante</h6>
+                <p class="lead">Edad: <span id="edadEstudiante"></span></p>
+                <button class="btn btn-success">Aprobar</button>
+                <button class="btn btn-danger">Desaprobar</button>
+            </div>
+       </article>
+    </template>
+    <template id="templateProfesor">
+        <article class="card mb-2 bg-dark text-white">
+            <div class="card-body m-3.5">
+                <h5>Nombre</h5>
+                <h6>Profesor</h6>
+                <p class="lead">Edad: <span id="edadProfesor"></span></p>
+            </div>
+        </article>
+    </template>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="megaPractica.js"></script>
+</body>
+</html>

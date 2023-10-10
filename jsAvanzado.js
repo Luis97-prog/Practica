@@ -68,7 +68,7 @@ const findPostById = async (id)=>{
         const res = await  fetch(url+id);
         const post = await res.json();
         console.log(post);
-    } catch (error){
+    } catch (error){ 
         console.log(error);
     }  
 };

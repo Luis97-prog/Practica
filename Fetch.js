@@ -5,7 +5,6 @@
 document.addEventListener("DOMContentLoaded",()=>{
     fetchData();
     
-    
 })
         
 const fetchData = async () => {
